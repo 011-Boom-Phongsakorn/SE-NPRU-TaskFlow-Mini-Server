@@ -23,6 +23,8 @@ const createTask = async (req, res) => {
       description: req.body.description || "",
       status: req.body.status || "todo",
       priority: req.body.priority || "medium",
+      startDate: req.body.startDate || null,
+      endDate: req.body.endDate || null,
       user_id: req.user.id,
     });
     res.status(201).json(task);
